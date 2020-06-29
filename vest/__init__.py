@@ -56,7 +56,7 @@ class Portfolio():
         return orders
 
 def get_config():
-    config = os.path.expanduser('~/.finvest/config.json')
+    config = os.path.expanduser('~/.vest/config.json')
     with open(config) as f:
         return json.load(f)
 
