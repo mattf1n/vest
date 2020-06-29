@@ -106,5 +106,3 @@ def cancel_all_orders(verbose, interactive):
     if verbose:
         pp.pprint(result)
 
-if __name__ == '__main__':
-    rebalance_portfolio(False, False)
