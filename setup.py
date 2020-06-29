@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='vest',
-    version='0.0.5',
+    version='0.0.6',
     author='mattf1n',
     long_description=long_description,
     long_description_content_type="text/markdown",
