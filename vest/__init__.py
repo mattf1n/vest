@@ -5,6 +5,14 @@ import os
 import pprint as pp
 import robin_stocks as rs
 
+try:
+    import importlib.resources as pkg_resources
+except ImportError:
+    import importlib_resources as pkg_resources
+
+from . import data
+
+
 class AssetClass():
     def __init__(self, name, setting, holdings):
         self.name = name
@@ -56,13 +64,13 @@ class Portfolio():
         return orders
 
 def get_config():
-    config = os.path.expanduser('~/.vest/config.json')
-    with open(config) as f:
+    with pkg_resources.open_text(data, 'config.json') as f:
         return json.load(f)
 
 def log_in(config):
-    account = config['Account info']
-    rs.login(account['Username'], account['Password'])
+    username = os.environ.get('RH_USERNAME')
+    password = os.environ.get('RH_PASS')
+    rs.login(username, password)
 
 def rebalance_portfolio(verbose, interactive):
     ''' Rebalances your portfolio '''
