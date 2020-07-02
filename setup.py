@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='vest',
-    version='0.0.8',
+    version='0.0.10',
     author='mattf1n',
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -14,6 +14,8 @@ setup(
     include_package_data=True,
     install_requires=[
         'Click',
+        'tabulate',
+        'pprint',
         'robin_stocks',
     ],
     entry_points='''
