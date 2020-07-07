@@ -6,6 +6,8 @@
     "Dividend Stocks":  {"Target allocation": 0.10, "Ticker": "VIG"},
     "Municipal Bonds":  {"Target allocation": 0.04, "Ticker": "VTEB"}
   },
-  "Cash allocation": 0
+  "Cash allocation": 0,
+  "Chart span": "3month",
+  "Chart interval": "week"
 }
 

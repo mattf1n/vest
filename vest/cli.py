@@ -8,9 +8,10 @@ def cli():
 
 @click.command()
 @click.option('--execute_all', is_flag=True)
-def rebalance(execute_all):
+@click.option('--test', is_flag=True)
+def rebalance(execute_all, test):
     ''' Rebalances your portfolio '''
-    rebalance_portfolio(execute_all)
+    rebalance_portfolio(execute_all, test)
 
 @click.command()
 def cancel_all():

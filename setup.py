@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='vest',
-    version='0.0.10',
+    version='0.0.12',
     author='mattf1n',
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -17,6 +17,8 @@ setup(
         'tabulate',
         'pprint',
         'robin_stocks',
+        'gnuplotlib',
+        'numpy',
     ],
     entry_points='''
         [console_scripts]
